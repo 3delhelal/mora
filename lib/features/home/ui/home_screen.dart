@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mora/core/helpers/extentions.dart';
 import 'package:mora/core/localization/app_localizations.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,8 +7,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(child: Text(AppLocalizations.of(context).testMessage)),
-    );
+    return Scaffold(body: Center(child: Text(context.localize.testMessage)));
   }
 }
