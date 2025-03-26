@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mora/core/localization/app_localizations.dart';
 
 extension Navigation on BuildContext {
   Future<dynamic> pushNamed(String routeName, {Object? arguments}) async {
@@ -26,4 +27,8 @@ extension Navigation on BuildContext {
   void pop() {
     Navigator.of(this).pop();
   }
+}
+
+extension Localization on BuildContext {
+  AppLocalizations get localize => AppLocalizations.of(this);
 }
